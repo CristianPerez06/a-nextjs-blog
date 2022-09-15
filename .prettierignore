@@ -1,3 +1,6 @@
 react-app-env.d.ts
 node_modules
 package-lock.json
+/node_modules
+/.next
+
