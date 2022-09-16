@@ -3,6 +3,8 @@ import { useGetPosts } from '../hooks/useGetPosts'
 import Layout from './Layout'
 import PreviewCard from './PreviewCard'
 
+import styles from './PreviewList.module.scss'
+
 const URL = '/post?limit=10'
 
 const PreviewList = () => {
@@ -10,17 +12,15 @@ const PreviewList = () => {
 
   return (
     <Layout>
-      <div>
-        {isLoading && <div>Loading...</div>}
-        {error && <div>Oops... Something went wrong</div>}
-        {response && (
-          <div>
-            {response.data.map((post) => (
-              <PreviewCard postPreview={post} key={post.id} />
-            ))}
-          </div>
-        )}
-      </div>
+      {isLoading && <div>Loading...</div>}
+      {error && <div>Oops... Something went wrong</div>}
+      {response && (
+        <div className={styles.listContainer}>
+          {response.data.map((post) => (
+            <PreviewCard postPreview={post} key={post.id} />
+          ))}
+        </div>
+      )}
     </Layout>
   )
 }
