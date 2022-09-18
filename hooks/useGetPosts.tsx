@@ -36,7 +36,7 @@ export const useGetPosts = (url: string): TApiResponse => {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [url])
 
   return { response, error, isLoading }
 }
