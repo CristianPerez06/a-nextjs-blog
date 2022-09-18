@@ -1,0 +1,86 @@
+.button {
+  min-width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border-color: var(--primary-400);
+  background-color: var(--white);
+  margin: 0.4rem;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    min-width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  border: 0.1rem solid var(--primary-200);
+  color: var(--primary-500);
+  background-color: var(--white);
+
+  &:hover {
+    background-color: var(--primary-100);
+  }
+
+  &:disabled {
+    background: #f5f4ff;
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+
+.icon {
+  border: 0.1rem solid var(--primary-400);
+  color: var(--primary-500);
+  background-color: var(--primary-100);
+
+  &:hover {
+    background-color: var(--primary-200);
+  }
+
+  &:disabled {
+    border-color: var(--primary-200);
+    background: var(--primary-100);
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  svg {
+    stroke-width: 0.4rem;
+  }
+}
+
+.separator {
+  border: 0;
+  background-color: transparent;
+  cursor: default;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.selected {
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--primary-400);
+  border-color: var(--primary-600);
+
+  &:hover {
+    background-color: var(--primary-400);
+  }
+
+  &:disabled {
+    color: var(--primary-500);
+    background: var(--primary-100);
+    opacity: 0.3;
+    border-color: var(--primary-400);
+    cursor: default;
+  }
+}
