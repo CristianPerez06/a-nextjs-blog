@@ -27,14 +27,12 @@ const PreviewList = () => {
   return (
     <Layout>
       <div className={styles.container}>
-        {!isLoading && error && <div>Oops... Something went wrong</div>}
+        {error && <div>Oops... Something went wrong</div>}
         {!error && response && (
           <>
             <div className={styles.list}>
               {isLoading && <Loading />}
-              {response.data.map((post) => (
-                <PreviewCard postPreview={post} key={post.id} />
-              ))}
+              {response && response.data.map((post) => <PreviewCard postPreview={post} key={post.id} />)}
             </div>
             <Pagination
               selectedPage={currentPage}

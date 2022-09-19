@@ -1,13 +1,25 @@
 .container {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.goBack {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary-700);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cardContainer {
   display: flex;
   flex-flow: column;
   border: 0.1rem solid var(--primary-500);
   border-radius: 0.3rem;
   padding: 2rem;
   margin: 0.5rem 0;
-  cursor: pointer;
 
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     flex-flow: row;
   }
 }
@@ -18,8 +30,8 @@
 }
 
 .imageContainer {
-  width: 180px;
-  height: 180px;
+  width: 380px;
+  height: 380px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,10 +46,14 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 1rem;
 
-  @media (min-width: 768px) {
+  > div {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 960px) {
     align-items: flex-start;
     justify-content: space-around;
   }
@@ -49,7 +65,24 @@
   color: var(--primary-700);
 }
 
-.tags {
-  font-size: 1.3rem;
-  color: var(--primary-300);
+.innerTitle {
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--primary-500);
+}
+
+.text {
+  font-size: 1.5rem;
+  color: var(--primary-500);
+}
+
+.likesContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  padding-left: 5rem;
 }
