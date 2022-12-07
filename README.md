@@ -1,19 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# a-nextjs-blog
+A minimal example on how to use NextJS to create a blog.
 
-## Getting Started
+## Tech stack
 
-First, install the dependencies:
+### Frontend
 
-```bash
-npm install
-```
+- Typescript
+- NextJS
+- ReactJS
+- SASS
+- @heroicons/react
+- @react-hook/media-query
+- react-spinners
+- Prettier, ESlint and Husky
 
-Then, run the development server:
+## How to execute the app
 
-```bash
-npm run dev
-```
-
-Open with your browser to see the result.
-
-Or, you can visit the app [here](https://a-nextjs-blog-r7c5efoqz-cristianperez06.vercel.app/)
+1. `npm install`
+2. `npm run dev`
